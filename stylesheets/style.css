@@ -1,0 +1,223 @@
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+    scrollbar-width: none;
+}
+
+:root{
+    --main--bg--color: #071f4a;
+    --main--bg-gradient: linear-gradient(270deg, rgba(7,31,74,1) 33%, rgba(3,44,124,1) 74%);
+    --main--text--color: whitesmoke;
+    --main--font: 'Montserrat';
+}
+
+body{
+    background: var(--main--bg--color);
+    background: var(--main--bg-gradient)
+}
+
+.wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.navbar, .navbar__components{
+    font-family: var(--main--font);
+    letter-spacing: .25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(min(2vw, 2vh), .75rem, 1rem);
+}
+
+.navbar__main, .navbar__components__header{
+    color: var(--main--text--color);
+    font-size: clamp(min(2vw, 2vh), 1.5rem, 2.5rem);
+}
+
+.menu__navbar__link{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--main--text--color);
+    transition: 250ms ease-in-out;
+}
+
+.menu__navbar__link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: .15rem;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu__navbar__link:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menu__navbar__link:hover{
+    color: rgb(245, 245, 245, 0.75);
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    padding: clamp(min(2vw, 2vh), .75rem, 1rem);
+    width: 100%;
+    color: var(--main--text--color);
+    font-family: var(--main--font);
+    letter-spacing: .25rem;
+    bottom: 0;
+    position: fixed;
+    justify-content: center;    
+}
+
+.container__content{
+    padding: clamp(min(3vw, 3vh), 2rem, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: clamp(min(4vh, 4vw), 2rem, 3);
+}
+
+.content__text{
+    width: 40%;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(min(2vw, 2vh), .75rem, 1.5rem);
+    color: var(--main--text--color);
+    font-family: var(--main--font);
+    font-size: clamp(min(2vh, 2vw), 1.5em, 3em);
+}
+
+.content__img{
+    aspect-ratio: 16 9;
+    width: clamp(min(5vw, 5vh), 25%, 30%);
+    border-radius: 75px;    
+}
+
+.loader__bg, .components__loader__bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background-color: #071f4a;
+    overflow: hidden;
+}
+
+.loader, .components__loader{
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    border: 10px dashed #3498db;
+    border-radius: 50%;
+    width: max(6vw, 6vh);
+    aspect-ratio: 1;
+    animation: spin 2s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.loader__hidden{
+    transition: 1500ms;
+    transform: translate(0%, -100%);
+}
+
+.change__screen__show{
+    transition: 1500ms;
+    transform: translate(0%, 0%);
+    overflow: hidden;
+}
+
+.myprojects__header{
+    font-family: var(--main--font);
+    color: var(--main--text--color);
+    letter-spacing: .5rem;
+}
+
+.content__myprojects{
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.slider{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fotos{
+    padding: 10px;
+    gap: 10rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:end;
+    justify-content: center;
+}
+
+.controls{
+    display: flex;
+    padding: 10px;
+    width: 100dvw;
+    color: var(--main--text--color);
+    font-size: larger;
+    font-family: var(--main--font);
+    justify-content: space-around;
+    transform: translate(0px, -100px);
+}
+
+.slide{
+    position: absolute;
+    aspect-ratio: 16/9;
+    height: 250px;
+    border-radius: 50px;
+    border: #0087ca 3px solid;
+}
+
+.left__slide{ 
+    transition: 1000ms;
+    transform: translate(-500px, 50px);
+    height: 175px;
+    opacity: 0.7;
+}
+
+.centre__slide{
+    transition: 1000ms;
+    transform: translate(0px, 75px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.right__slide{
+    transition: 1000ms;
+    transform: translate(500px, 50px);
+    height: 175px;
+    opacity: 0.7;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

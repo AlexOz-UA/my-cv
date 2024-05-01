@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body onload=hideLoader()>
+    <div class="components__loader__bg"><div class="components__loader" id="componentsLoader"></div></div>
+    <div class="wrapper">
+        <div class="navbar__components">
+            <h2 class="navbar__components__header" onclick="changeScreen(this)" id="index.html">Alex`s World</h2>
+            <div>
+                <a class="menu__navbar__link" onclick="changeScreen(this)" id="index.html">Homepage</a>
+            </div>
+        </div>
+        </div>
+        <div class="content content__myprojects">
+            <h1 class="myprojects__header">My projects</h1>
+            <div class="slider">
+                <div class="fotos">
+                    <img src="/images/myfoto.jpg" alt="slide" class="slide left__slide">
+                    <img src="/images/foto1.jpg" alt="slide" class="slide centre__slide">
+                    <img src="/images/foto2.jpg" alt="slide" class="slide right__slide">
+                    <div class="controls">
+                        <button class="arrow__left" onclick="moveToNextSlide()">Left</button>
+                        <button class="arrow__right" onclick="moveToPrevSlide()">Right</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+<script src="../scripts/myprojects.js"></script>
+</html>

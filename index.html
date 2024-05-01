@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body onload=hideLoader()>
+    <div class="loader__bg"><div class="loader" id="loader"></div></div>
+    <div class="wrapper">
+        <div class="navbar">
+            <h2 class="navbar__main">Alex`s World</h2>
+            <div class="menu__navbar">
+                <a class="menu__navbar__link" onclick="changeScreen(this)" id="aboutme.html">About Me</a>
+                <a class="menu__navbar__link" onclick="changeScreen(this)" id="myinterests.html">My interests</a>
+                <a class="menu__navbar__link" onclick="changeScreen(this)" id="myprojects.html">My projects</a>
+        </div>
+        </div>
+        <div class="content">
+            <div class="container container__content">
+                <div class="content__text">
+                    <b>Hi, my name is Alex, and I'm a young Web Developer.</b>
+                    <p>Passionate and dynamic, I specialize in JavaScript, HTML, and CSS. Eager to contribute to innovative projects and continuously expand my knowledge in web development. Committed to delivering high-quality code and exceptional user experiences.</p>
+                </div>
+                <img src="images/myfoto.jpg" alt="" class="content__img">
+            </div>    
+        </div>
+        <div class="footer">
+            <h2 class="navbar__footer">Thanks for coming!</h2>
+        </div>
+    </div>
+</body>
+<script src="./scripts/script.js"></script>
+</html>
