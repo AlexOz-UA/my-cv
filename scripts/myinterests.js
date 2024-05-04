@@ -12,8 +12,7 @@ let changeScreen = (e) => {
     loader.classList.add('change__screen__show');
     loaderBg.classList.add('change__screen__show');
     setTimeout(() => {
-       window.location.pathname = `../${e.id}`;
+       window.location.pathname = `my-cv/${e.id}`;
     }, 1500);
 }
-
 
