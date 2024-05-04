@@ -14,6 +14,4 @@ let changeScreen = (e) => {
     setTimeout(() => {
        window.location.pathname = `my-cv/${e.id}`;
     }, 1500);
-}
-
-
+}//
